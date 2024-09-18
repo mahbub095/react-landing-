@@ -3,8 +3,19 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{html,js}"],
+    darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'primary': '#E58411',
+        'secondary': '#1E1E1E',
+        'secondary-bg': "#F7F7F7",
+       
+      },
+      fontFamily:{
+        'primary': ["Poppins","sans-serif"]
+      }
+    },
   },
   plugins: [],
 }
