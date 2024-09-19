@@ -1,25 +1,14 @@
 import { useState } from 'react'
 import './App.css'
 import { Outlet,Link } from 'react-router-dom'
+import Navbar from './components/Navbar'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <nav>
-        <ul className='flex space-x-8 mb-8 bottom-0'>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
+       <Navbar></Navbar>
       <Outlet></Outlet>
       <footer>Footer</footer>
     </>
