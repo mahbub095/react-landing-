@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { Outlet,Link } from 'react-router-dom'
+import { Outlet, Link } from 'react-router-dom'
 import Navbar from './components/Navbar'
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-       <Navbar></Navbar>
+      <Navbar></Navbar>
       <Outlet></Outlet>
       <footer>Footer</footer>
     </>

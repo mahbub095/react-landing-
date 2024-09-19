@@ -6,24 +6,34 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+ 
+import About from './pages/about/About.jsx';
+import Contact from './pages/contact/Contact.jsx';
+import Shop from './pages/shop/Shop.jsx';
+import Home from './pages/home/home.jsx';
 
+// Pages route
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
-    children:[
+    element: <App />,
+    children: [
       {
         path: "/",
-        element: <h1>Home main</h1>
+        element: <Home></Home>
       },
       {
         path: "/about",
-        element: <h1>About main</h1>
+        element: <About></About>
       },
       {
         path: "/contact",
-        element: <h1>Contact main</h1>
+        element: <Contact />
+      },
+      {
+        path: "/shop",
+        element: <Shop />
       }
     ]
   },
@@ -31,7 +41,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-   <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </StrictMode>,
 )
- 
