@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { FaBasketShopping } from "react-icons/fa6";
 
 // Define an array of nav items
 const navItems = [
@@ -10,12 +11,18 @@ const navItems = [
 ];
 
 const NavItems = () => {
-    return(
-        <ul>
+    return (
+        <ul className="flex flex-col md:flex-row items-center md space-x-8">
             {
-                navItems.map((item,index)=> (
+                navItems.map((item, index) => (
                     <li>
-                        <Link to ={item.path}>{item.label}</Link>
+                        <NavLink to={item.path}
+                            className={({ isActive }) =>
+                                isActive
+                                    ? "text-primary font-bold" 
+                                    : "hover:text-primary"
+                            }
+                        >{item.label}</NavLink>
 
                     </li>
                 ))
@@ -31,12 +38,17 @@ const Navbar = () => {
                 {/* logo */}
                 <Link to="/" className="font-bold">Logo</Link>
                 {/* desktop menu items */}
-                <div>
-                    <NavItems/>
+                <div className='hidden md:flex'>
+                    <NavItems />
                 </div>
-               
+
                 {/* Cart icon */}
-                <div> cart</div>
+                <div className='hidden md:block cursor-pointer relative'> 
+                    <FaBasketShopping/>
+                    <sup  className="absolute top-0 -right-3 bg-primary text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
+                        0
+                    </sup>
+                </div>
             </nav>
         </header>
 
