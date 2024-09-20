@@ -10,7 +10,7 @@ import {
 import About from './pages/about/About.jsx';
 import Contact from './pages/contact/Contact.jsx';
 import Shop from './pages/shop/Shop.jsx';
-import Home from './pages/home/home.jsx';
+import Home from './pages/home/Home.jsx';
 
 // Pages route
 
